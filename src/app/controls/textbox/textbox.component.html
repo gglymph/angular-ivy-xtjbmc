@@ -1,8 +1,8 @@
-<div class="content" [formGroup]="formGroup">
+<div class="content"  [class.errorInput]="formControlName.invalid && (formControlName.touched || formControlName.dirty)" [formGroup]="formGroup">
   <span class="material-icons" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
   error
   </span>
-  <input id="input" [formControlName]="controlName" [type]="inputType" [class.errorInput]="formControlName.invalid && (formControlName.touched || formControlName.dirty)" />
+  <input id="input" [formControlName]="controlName" [type]="inputType" />
   <div class="error" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
     Error Message
   </div>
