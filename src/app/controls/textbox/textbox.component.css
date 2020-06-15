@@ -1,0 +1,25 @@
+.content {
+  position: relative;
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 3px;
+}
+
+.content span {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+
+.content input {
+  border: none;
+  outline: none !important;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+}
+
+.content input:focus, .content input:hover {
+  border-color: #719ECE;
+  box-shadow: 0 0 10px #719ECE;
+}
