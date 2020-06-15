@@ -1,4 +1,5 @@
 import { Component, VERSION } from "@angular/core";
+import { FormBuilder, Validators } from "@angular/forms";
 
 @Component({
   selector: "my-app",
@@ -6,5 +7,12 @@ import { Component, VERSION } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+
+  formGroupName = this.fb.group({
+    textBox: [null, Validators.required]
+  });
+
+  constructor(private fb: FormBuilder) {}
+
   name = "Angular " + VERSION.major;
 }

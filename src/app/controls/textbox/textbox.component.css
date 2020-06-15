@@ -35,3 +35,7 @@
   box-sizing: border-box;
   border-top: solid 1px #b30000;
  }
+
+ .content .ng-invalid {
+   border: solid 1px #b30000;
+ }

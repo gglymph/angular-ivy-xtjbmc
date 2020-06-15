@@ -2,5 +2,6 @@
 <p>
   Start editing to see some magic happen :)
 </p>
-
-<publiq-textbox></publiq-textbox>
+<form [formGroup]="formGroupName">
+  <publiq-textbox [formGroup]="formGroupName" controlName="textBox"></publiq-textbox>
+</form>

@@ -1,9 +1,9 @@
-<div class="content">
-  <span class="material-icons">
+<div class="content" [formGroup]="formGroup">
+  <span class="material-icons" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
   error
   </span>
-  <input id="input" />
-  <div class="error">
+  <input id="input" [formControlName]="controlName" [type]="inputType" />
+  <div class="error" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
     Error Message
   </div>
 </div>
