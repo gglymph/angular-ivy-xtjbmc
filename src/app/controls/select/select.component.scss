@@ -1,32 +1,37 @@
-.content {
+$color2: #3197EE;
+
+.selectContent {
   position: relative;
   width: 100%;
   border: solid 1px black;
   border-radius: 3px;
-  margin: 5px 0px
+  margin: 5px 0px;
 }
-
-.content span {
+.selectContent span {
   position: absolute;
   right: 5px;
   top: 2px;
   color: #e60000;
 }
 
-.content input {
+.selectContent select {
   border: none;
   outline: none !important;
   box-sizing: border-box;
   width: 100%;
   padding: 6px;
+  option {
+    padding: 6px;
+  }
 }
 
-.content input:focus, .content input:hover {
+
+.selectContent select:focus, .content select:hover {
   border-color: #719ECE;
   box-shadow: 0 0 5px #719ECE;
 }
 
-.content .error {
+.selectContent .error {
   padding: 6px;
   width: 100%;
   background-color: #e60000;
