@@ -11,22 +11,20 @@ $color2: #3197EE;
   position: absolute;
   right: 5px;
   top: 2px;
-  color: #e60000;
+  cursor: pointer;
 }
 
-.selectContent select {
+.selectContent input {
   border: none;
   outline: none !important;
   box-sizing: border-box;
   width: 100%;
   padding: 6px;
-  option {
-    padding: 6px;
-  }
+  
 }
 
 
-.selectContent select:focus, .content select:hover {
+.selectContent input:focus, .selectContent input:hover {
   border-color: #719ECE;
   box-shadow: 0 0 5px #719ECE;
 }
