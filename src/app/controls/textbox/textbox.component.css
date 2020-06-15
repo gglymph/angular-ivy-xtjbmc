@@ -9,6 +9,7 @@
   position: absolute;
   right: 5px;
   top: 2px;
+  color: #e60000;
 }
 
 .content input {
@@ -23,3 +24,14 @@
   border-color: #719ECE;
   box-shadow: 0 0 10px #719ECE;
 }
+
+.content .error {
+  padding: 6px;
+  width: 100%;
+  background-color: #e60000;
+  color: white;
+  font-weight: bold;
+  font-size: 9pt;
+  box-sizing: border-box;
+  border-top: solid 1px #b30000;
+ }
