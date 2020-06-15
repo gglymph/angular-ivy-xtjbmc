@@ -22,7 +22,7 @@
 
 .content input:focus, .content input:hover {
   border-color: #719ECE;
-  box-shadow: 0 0 10px #719ECE;
+  box-shadow: 0 0 5px #719ECE;
 }
 
 .content .error {
@@ -36,6 +36,6 @@
   border-top: solid 1px #b30000;
  }
 
- .content .ng-invalid {
+ .content .errorInput {
    border: solid 1px #b30000;
  }

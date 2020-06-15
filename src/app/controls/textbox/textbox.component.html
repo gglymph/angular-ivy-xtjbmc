@@ -2,7 +2,7 @@
   <span class="material-icons" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
   error
   </span>
-  <input id="input" [formControlName]="controlName" [type]="inputType" />
+  <input id="input" [formControlName]="controlName" [type]="inputType" [class.errorInput]="formControlName.invalid && (formControlName.touched || formControlName.dirty)" />
   <div class="error" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
     Error Message
   </div>
