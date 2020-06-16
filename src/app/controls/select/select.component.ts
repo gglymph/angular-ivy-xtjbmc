@@ -42,6 +42,7 @@ export class SelectComponent implements OnInit {
 
   click() {
     this.showList = true;
+    document.getElementById('list').focus();
   }
 
   hideDropDown() {
