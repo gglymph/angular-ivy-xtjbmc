@@ -32,10 +32,6 @@ export class SelectComponent implements OnInit {
   showList = false;
   inputValue = '';
 
-  get formGroup() {
-    return this.control.parent as FormGroup;
-  }
-
   get formControl() {
     return this.control as FormControl;
   }

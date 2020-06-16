@@ -11,19 +11,29 @@ export class AppComponent implements OnInit {
   formGroupName = this.fb.group({
     textBox: [null, Validators.required],
     select:  [null, Validators.required],
-    array: this.fb.array([])
+    array: this.fb.array([]),
+    array2: this.fb.array([])
   });
 
   get arr() {
     return this.formGroupName.get('array') as FormArray;
   }
+  
+  get arr2() {
+    return this.formGroupName.get('array2') as FormArray;
+  }
 
   ngOnInit() {
     for (let i = 0; i < 5; i++) {
       const formGroup = this.fb.group({
-        cntrl: `Control ${i}`
+        cntrl: `First Control ${i}`,
+        cntrl2: `Second Control ${i}`
       })
+      this.arr2.push(formGroup);
+      this.arr.push(this.fb.control(`Control ${i}`));
     }
+
+    console.log(this.arr2);
   }
 
   constructor(private fb: FormBuilder) {}

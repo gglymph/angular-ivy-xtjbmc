@@ -9,13 +9,9 @@ import { FormControl, FormGroup, AbstractControl } from '@angular/forms';
 export class TextboxComponent implements OnInit {
 
   @Input() required = true;
-  //@Input() formGroup: FormGroup;
   @Input() control: AbstractControl;
   @Input() inputType: string;
 
-  get formGroup() {
-    return this.control.parent as FormGroup;
-  }
 
   get formControl() {
     return this.control as FormControl;
