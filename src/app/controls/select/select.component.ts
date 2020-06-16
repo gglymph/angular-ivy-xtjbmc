@@ -30,6 +30,7 @@ export class SelectComponent implements OnInit {
   @Input() formGroup: FormGroup;
   @Input() controlName: any;
   showList = false;
+  inputValue = '';
 
   get formControlName() {
     return this.formGroup.get(this.controlName) as FormControl;
@@ -46,6 +47,12 @@ export class SelectComponent implements OnInit {
   }
 
   hideDropDown() {
+    this.showList = false;
+  }
+
+  itemClick(item: any) {
+    this.formControlName.setValue(item);
+    this.inputValue = item.text;
     this.showList = false;
   }
 

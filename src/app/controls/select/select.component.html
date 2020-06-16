@@ -2,11 +2,13 @@
   <span class="material-icons">
     keyboard_arrow_down
   </span>
-  <input readonly id="select" [formControlName]="controlName" (click)="click()"  />
+  <div [formControlName]="controlName">
+    <input readonly id="select" (click)="click()" [value]="inputValue" />
+  </div>
   <div class="listWrapper">
     <div [@fade] id="list" *ngIf="showList" class="listItems">
       <ul>
-        <li *ngFor="let item of items; let i = index">{{item.text}}</li>
+        <li *ngFor="let item of items; let i = index" (click)="itemClick(item)">{{item.text}}</li>
       </ul>
     </div>
   </div>
