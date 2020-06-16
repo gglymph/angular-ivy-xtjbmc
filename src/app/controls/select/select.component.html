@@ -1,11 +1,10 @@
-
-<div class="selectContent" [formGroup]="formGroup">
+<div id="list" class="selectContent" [formGroup]="formGroup" (blur)="hideDropDown()" tabindex="1">
   <span class="material-icons">
     keyboard_arrow_down
   </span>
-  <input id="select" [formControlName]="controlName" (click)="click()"  />
+  <input readonly id="select" [formControlName]="controlName" (click)="click()"  />
   <div class="listWrapper">
-    <div [@fade] id="list" *ngIf="showList" (blur)="hideDropDown()"         contenteditable="true" class="listItems">
+    <div [@fade] id="list" *ngIf="showList" class="listItems">
       <ul>
         <li *ngFor="let item of items; let i = index">{{item.text}}</li>
       </ul>

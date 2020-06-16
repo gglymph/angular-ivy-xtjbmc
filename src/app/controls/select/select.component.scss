@@ -6,6 +6,7 @@ $color2: #3197EE;
   border: solid 1px black;
   border-radius: 3px;
   margin: 5px 0px;
+  outline: none !important;
 }
 .selectContent span {
   position: absolute;
@@ -26,6 +27,7 @@ $color2: #3197EE;
 .listWrapper {
   position: relative;
   width: 100%;
+  
 }
 
 .listItems {
@@ -40,8 +42,8 @@ $color2: #3197EE;
   border-top: none;
   border-radius: 3px;
   box-sizing: border-box;
-  outline: none !important;
 }
+
 
 .listItems ul {
   list-style-type: none;
