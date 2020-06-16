@@ -1,4 +1,4 @@
-<div id="list" class="selectContent" [formGroup]="formGroup" (blur)="hideDropDown()" tabindex="1">
+<div id="list" class="selectContent" [class.errorInput]="control.invalid && (control.touched || control.dirty)" [formGroup]="formGroup" (blur)="hideDropDown()" tabindex="1">
   <span class="material-icons">
     keyboard_arrow_down
   </span>
