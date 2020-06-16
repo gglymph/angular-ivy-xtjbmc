@@ -1,11 +1,11 @@
-<div class="selectContent">
+<div class="selectContent" [formGroup]="formGroup">
   <span class="material-icons">
     keyboard_arrow_down
   </span>
-  <input readonly id="select" />
-  <div>
+  <input readonly id="select" [formControlName]="controlName" (click)="click()"  />
+  <div [@fade] *ngIf="showList" class="listItems">
     <ul>
-      <li *ngFor="let id of items; let i = index"></li>
+      <li *ngFor="let item of items; let i = index"></li>
     </ul>
   </div>
   <div class="error">

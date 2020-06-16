@@ -23,6 +23,27 @@ $color2: #3197EE;
   
 }
 
+.listItems {
+  position: absolute;
+  bottom: 0px;
+  z-index: 1000;
+  background-color: white;
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.listItems li {
+  padding: 5px;
+}
+
+.listItems li:hover {
+  background-color: $color2;
+  color: white;
+  font-weight: bold;
+}
+
 
 .selectContent input:focus, .selectContent input:hover {
   border-color: #719ECE;
