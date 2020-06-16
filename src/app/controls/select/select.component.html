@@ -3,6 +3,11 @@
     keyboard_arrow_down
   </span>
   <input readonly id="select" />
+  <div>
+    <ul>
+      <li *ngFor="let id of items; let i = index"></li>
+    </ul>
+  </div>
   <div class="error">
     Error Message
   </div>
