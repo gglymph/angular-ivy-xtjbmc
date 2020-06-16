@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
         cntrl2: [`Second Control ${i}`, Validators.required]
       })
       this.arr2.push(formGroup);
-      this.arr.push(this.fb.control(`Control ${i}`));
+      this.arr.push(this.fb.control(`Control ${i}`, Validators.required));
     }
 
     console.log(this.arr2);
