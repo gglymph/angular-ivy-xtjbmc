@@ -23,9 +23,13 @@ $color2: #3197EE;
   
 }
 
+.listWrapper {
+  position: relative;
+}
+
 .listItems {
   position: absolute;
-  bottom: 0px;
+  top: 2px;
   z-index: 1000;
   background-color: white;
   width: 100%;
@@ -34,8 +38,16 @@ $color2: #3197EE;
   box-sizing: border-box;
 }
 
+.listItems ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
 .listItems li {
   padding: 5px;
+  margin: 0px;
+  cursor: pointer;
 }
 
 .listItems li:hover {

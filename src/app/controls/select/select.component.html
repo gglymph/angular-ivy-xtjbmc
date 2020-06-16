@@ -2,11 +2,13 @@
   <span class="material-icons">
     keyboard_arrow_down
   </span>
-  <input readonly id="select" [formControlName]="controlName" (click)="click()"  />
-  <div [@fade] *ngIf="showList" class="listItems">
-    <ul>
-      <li *ngFor="let item of items; let i = index"></li>
-    </ul>
+  <input id="select" [formControlName]="controlName" (click)="click()"  />
+  <div class="listWrapper">
+    <div [@fade] *ngIf="showList" class="listItems">
+      <ul>
+        <li *ngFor="let item of items; let i = index">{{item.text}}</li>
+      </ul>
+    </div>
   </div>
   <div class="error">
     Error Message
