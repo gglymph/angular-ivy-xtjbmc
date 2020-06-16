@@ -26,8 +26,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     for (let i = 0; i < 5; i++) {
       const formGroup = this.fb.group({
-        cntrl: `First Control ${i}`,
-        cntrl2: `Second Control ${i}`
+        cntrl: [`First Control ${i}`, Validators.required],
+        cntrl2: [`Second Control ${i}`, Validators.required]
       })
       this.arr2.push(formGroup);
       this.arr.push(this.fb.control(`Control ${i}`));
