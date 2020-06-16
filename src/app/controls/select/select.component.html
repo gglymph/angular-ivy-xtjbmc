@@ -2,9 +2,9 @@
   <span class="material-icons">
     keyboard_arrow_down
   </span>
-  <div [formControlName]="controlName">
-    <input readonly id="select" (click)="click()" [value]="inputValue" />
-  </div>
+
+    <input readonly id="select" [formControl]="formControl" (click)="click()" [value]="inputValue" />
+
   <div class="listWrapper">
     <div [@fade] id="list" *ngIf="showList" class="listItems">
       <ul>
@@ -12,7 +12,7 @@
       </ul>
     </div>
   </div>
-  <div class="error" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
+  <div class="error" *ngIf="formControl.invalid && (formControl.touched || formControl.dirty)">
     Error Message
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { transition, trigger, style, animate } from '@angular/animations';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'publiq-select',
@@ -27,13 +27,17 @@ export class SelectComponent implements OnInit {
                     {value: 3, text: 'Option 3'},
                     {value: 4, text: 'Option 4'}];
 
-  @Input() formGroup: FormGroup;
-  @Input() controlName: any;
+  @Input() control: AbstractControl;
+ 
   showList = false;
   inputValue = '';
 
-  get formControlName() {
-    return this.formGroup.get(this.controlName) as FormControl;
+  get formGroup() {
+    return this.control.parent as FormGroup;
+  }
+
+  get formControl() {
+    return this.control as FormControl;
   }
   
   constructor() { }
@@ -51,7 +55,7 @@ export class SelectComponent implements OnInit {
   }
 
   itemClick(item: any) {
-    this.formControlName.setValue(item);
+    this.formControl.setValue(item);
     this.inputValue = item.text;
     this.showList = false;
   }

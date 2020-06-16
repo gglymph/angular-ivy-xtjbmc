@@ -1,3 +1,6 @@
+
+$font-family: 'Lato';
+
 .content {
   position: relative;
   width: 100%;
@@ -19,6 +22,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 6px;
+  font-family: $font-family;
 }
 
 .content input:focus, .content input:hover {

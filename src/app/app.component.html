@@ -11,6 +11,6 @@
   </div>
 </div>
 <form [formGroup]="formGroupName">
-  <publiq-textbox [formGroup]="formGroupName" controlName="textBox"></publiq-textbox>
-  <publiq-select [formGroup]="formGroupName" controlName="select"></publiq-select>
+  <publiq-textbox [control]="formGroupName.controls.textBox"></publiq-textbox>
+  <publiq-select [control]="formGroupName.controls.select"></publiq-select>
 </form>

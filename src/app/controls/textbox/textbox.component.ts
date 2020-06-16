@@ -1,20 +1,24 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'publiq-textbox',
   templateUrl: './textbox.component.html',
-  styleUrls: ['./textbox.component.css']
+  styleUrls: ['./textbox.component.scss']
 })
 export class TextboxComponent implements OnInit {
 
   @Input() required = true;
-  @Input() formGroup: FormGroup;
-  @Input() controlName: any;
+  //@Input() formGroup: FormGroup;
+  @Input() control: AbstractControl;
   @Input() inputType: string;
 
-  get formControlName() {
-    return this.formGroup.get(this.controlName) as FormControl;
+  get formGroup() {
+    return this.control.parent as FormGroup;
+  }
+
+  get formControl() {
+    return this.control as FormControl;
   }
 
   constructor() { }
