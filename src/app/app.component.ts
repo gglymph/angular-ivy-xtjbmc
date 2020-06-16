@@ -9,7 +9,8 @@ import { FormBuilder, Validators } from "@angular/forms";
 export class AppComponent {
 
   formGroupName = this.fb.group({
-    textBox: [null, Validators.required]
+    textBox: [null, Validators.required],
+    select:  [null, Validators.required]
   });
 
   constructor(private fb: FormBuilder) {}

@@ -1,16 +1,18 @@
+
 <div class="selectContent" [formGroup]="formGroup">
   <span class="material-icons">
     keyboard_arrow_down
   </span>
   <input id="select" [formControlName]="controlName" (click)="click()"  />
   <div class="listWrapper">
-    <div [@fade] *ngIf="showList" class="listItems">
+    <div [@fade] *ngIf="showList" (blur)="hideDropDown()"         contenteditable="true" class="listItems">
       <ul>
         <li *ngFor="let item of items; let i = index">{{item.text}}</li>
       </ul>
     </div>
   </div>
-  <div class="error">
+  <div class="error" *ngIf="formControlName.invalid && (formControlName.touched || formControlName.dirty)">
     Error Message
   </div>
 </div>
+
