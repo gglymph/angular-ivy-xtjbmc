@@ -11,6 +11,11 @@ export class TextboxComponent implements OnInit {
   @Input() required = true;
   @Input() control: AbstractControl;
   @Input() inputType: string;
+  @Input() seed: number;
+  @Input() maxLength: number;
+  @Input() step: number;
+  @Input() maxNumber: number;
+  @Input() minNumber: number;
 
 
   get formControl() {

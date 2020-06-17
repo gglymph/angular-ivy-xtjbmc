@@ -13,6 +13,8 @@
 <form [formGroup]="formGroupName">
   <strong>Textbox Example</strong>
   <publiq-textbox [control]="formGroupName.controls.textBox"></publiq-textbox>
+  <strong>Numeric Textbox Example</strong>
+  <publiq-textbox [control]="formGroupName.controls.numeric" inputType="number"></publiq-textbox>
   <strong>Dropdown Example</strong>
   <publiq-select [control]="formGroupName.controls.select"></publiq-select>
   <h2>Form Array Example w/o Group</h2>

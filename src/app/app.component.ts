@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   formGroupName = this.fb.group({
     textBox: [null, Validators.required],
     select:  [null, Validators.required],
+    numeric: [null, Validators.required],
     array: this.fb.array([]),
     array2: this.fb.array([])
   });
