@@ -13,7 +13,7 @@ export class TextboxComponent implements OnInit {
   @Input() required = true;
   @Input() control: AbstractControl;
   @Input() inputType: string;
-  @Input() errorMessages: any;
+  @Input() errorMessages: any = {};
 
 
   get formControl() {

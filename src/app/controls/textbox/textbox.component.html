@@ -5,7 +5,12 @@
   <input id="input" [formControl]="formControl" [type]="inputType" />
   <div class="error" *ngIf="control.invalid && (control.touched || control.dirty)">
     <div *ngFor="let key of objectKeys(control.errors)">
-      {{errorMessages[key]}}
+      <span *ngIf="errorMessages[key]">
+        {{errorMessages[key]}}
+      </span>
+      <span *ngIf="!errorMessages[key]">
+        Error on this control!
+      </span>
     </div>
   </div>
 </div>
