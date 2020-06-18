@@ -4,6 +4,8 @@
   </span>
   <input id="input" [formControl]="formControl" [type]="inputType" />
   <div class="error" *ngIf="control.invalid && (control.touched || control.dirty)">
-    Error Message
+    <div *ngFor="let key of objectKeys(control.errors)">
+      {{errorMessages[key]}}
+    </div>
   </div>
 </div>

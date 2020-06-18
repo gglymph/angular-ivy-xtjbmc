@@ -12,7 +12,9 @@
 </div>
 <form [formGroup]="formGroupName">
   <strong>Textbox Example</strong>
-  <publiq-textbox [control]="formGroupName.controls.textBox"></publiq-textbox>
+  
+  <publiq-textbox inputType="email" [control] ="formGroupName.controls.textBox" [errorMessages]="{required: 'Required Error Message', pattern: 'Pattern Error Message'}"></publiq-textbox>
+  
   <strong>Numeric Textbox Example</strong>
   <publiq-textbox [control]="formGroupName.controls.numeric" inputType="number"></publiq-textbox>
   <strong>Dropdown Example</strong>

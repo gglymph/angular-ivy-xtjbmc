@@ -9,7 +9,7 @@ import { FormBuilder, Validators, FormArray } from "@angular/forms";
 export class AppComponent implements OnInit {
 
   formGroupName = this.fb.group({
-    textBox: [null, Validators.required],
+    textBox: [null, [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
     select:  [null, Validators.required],
     numeric: [null, Validators.required],
     array: this.fb.array([]),

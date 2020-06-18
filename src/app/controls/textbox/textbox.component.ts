@@ -8,14 +8,12 @@ import { FormControl, FormGroup, AbstractControl } from '@angular/forms';
 })
 export class TextboxComponent implements OnInit {
 
+  objectKeys = Object.keys;
+
   @Input() required = true;
   @Input() control: AbstractControl;
   @Input() inputType: string;
-  @Input() seed: number;
-  @Input() maxLength: number;
-  @Input() step: number;
-  @Input() maxNumber: number;
-  @Input() minNumber: number;
+  @Input() errorMessages: any;
 
 
   get formControl() {
